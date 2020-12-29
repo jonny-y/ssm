@@ -1,0 +1,23 @@
+server:
+  port: 8080
+
+spring:
+  datasource:
+    username: root
+    password: ccddba4f-0baa
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://192.168.2.11:10336/attendance?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=UTC
+  thymeleaf:
+    prefix: classpath:/templates/
+    cache: false
+    encoding: UTF-8
+
+mybatis:
+  mapper-locations: classpath*:mapper/*.xml
+  type-aliases-package: com.weituo.attendance
+
+# 日志配置
+logging:
+  level:
+    com.feiyu.ssm: debug
+    org.springframework: warn
